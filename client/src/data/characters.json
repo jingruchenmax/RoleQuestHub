@@ -1,0 +1,299 @@
+[
+  {
+    "matadata": {
+      "username": "IThomas"
+    },
+    "basicInfo": {
+      "name": "艾萨克 托马斯",
+      "birthplace": "伦敦",
+      "gender": "男性",
+      "occupation": "研究员",
+      "residence": "纽约",
+      "language": "英文",
+      "age": 50
+    },
+    "characteristics": {
+      "STR": 75,
+      "SIZ": 60,
+      "CON": 55,
+      "POW": 45,
+      "DEX": 60,
+      "APP": 55,
+      "INT": 55,
+      "EDU": 86,
+      "hitPoints": 11,
+      "magicPoints": 9,
+      "luck": 75,
+      "sanity": 45,
+      "damage": "+1D4"
+    },
+    "skills": {
+      "Anthropology": {
+        "value": 1,
+        "visible": false
+      },
+      "Archaeology": {
+        "value": 1,
+        "visible": false
+      },
+      "Appraise": {
+        "value": 5,
+        "visible": false
+      },
+      "Charm": {
+        "value": 15,
+        "visible": true
+      },
+      "Climb": {
+        "value": 20,
+        "visible": false
+      },
+      "ComputerUse": {
+        "value": 5,
+        "visible": false
+      },
+      "CreditRating": {
+        "value": 30,
+        "visible": true
+      },
+      "CthulhuMythos": {
+        "value": 0,
+        "visible": false
+      },
+      "Disguise": {
+        "value": 5,
+        "visible": false
+      },
+      "Dodge": {
+        "value": 30,
+        "visible": true
+      },
+      "Drive_Auto": {
+        "value": 40,
+        "visible": false
+      },
+      "ElectricalRepair": {
+        "value": 40,
+        "visible": false
+      },
+      "Electronics": {
+        "value": 1,
+        "visible": false
+      },
+      "FastTalk": {
+        "value": 5,
+        "visible": false
+      },
+      "Fighting_Brawl": {
+        "value": 25,
+        "visible": false
+      },
+      "Firearms_Handgun": {
+        "value": 45,
+        "visible": false
+      },
+      "Firearms_RifleShotgun": {
+        "value": 25,
+        "visible": false
+      },
+      "FirstAid": {
+        "value": 30,
+        "visible": false
+      },
+      "History": {
+        "value": 40,
+        "visible": false
+      },
+      "Intimidate": {
+        "value": 15,
+        "visible": true
+      },
+      "Jump": {
+        "value": 20,
+        "visible": false
+      },
+      "Language_English": {
+        "value": 86,
+        "visible": true
+      },
+      "Language_Chinese": {
+        "value": 50,
+        "visible": false
+      },
+      "Law": {
+        "value": 5,
+        "visible": false
+      },
+      "LibraryUse": {
+        "value": 60,
+        "visible": true
+      },
+      "Listen": {
+        "value": 20,
+        "visible": true
+      },
+      "Locksmith": {
+        "value": 1,
+        "visible": false
+      },
+      "MechanicalRepair": {
+        "value": 10,
+        "visible": false
+      },
+      "Medicine": {
+        "value": 1,
+        "visible": false
+      },
+      "NaturalWorld": {
+        "value": 10,
+        "visible": false
+      },
+      "Navigate": {
+        "value": 10,
+        "visible": false
+      },
+      "Occult": {
+        "value": 5,
+        "visible": false
+      },
+      "OperateHeavyMachinery": {
+        "value": 36,
+        "visible": false
+      },
+      "Persuade": {
+        "value": 30,
+        "visible": true
+      },
+      "Pilot": {
+        "value": 0,
+        "visible": false
+      },
+      "Psychoanalysis": {
+        "value": 1,
+        "visible": false
+      },
+      "Psychology": {
+        "value": 10,
+        "visible": false
+      },
+      "Science_Geology": {
+        "value": 51,
+        "visible": false
+      },
+      "Science_Chemistry": {
+        "value": 51,
+        "visible": false
+      },
+      "Science_Biology": {
+        "value": 51,
+        "visible": false
+      },
+      "SpotHidden": {
+        "value": 60,
+        "visible": true
+      },
+      "Stealth": {
+        "value": 20,
+        "visible": false
+      },
+      "Survival": {
+        "value": 10,
+        "visible": false
+      },
+      "Swim": {
+        "value": 20,
+        "visible": false
+      },
+      "Throw": {
+        "value": 20,
+        "visible": false
+      },
+      "Track": {
+        "value": 10,
+        "visible": false
+      }
+    },
+    "characterDescriptions": {
+      "PersonalDescription": {
+        "value": "苍白、狐臭且死人脸的人。",
+        "visible": true
+      },
+      "IdeologyAndBeliefs": {
+        "value": "你信仰并祈并一位大能。(例如毗沙门天、耶稣基督、海尔·塞拉西一世)",
+        "visible": true
+      },
+      "SignificantPeople": {
+        "value": "",
+        "visible": false
+      },
+      "MeaningfulLocations": {
+        "value": "",
+        "visible": false
+      },
+      "TreasuredPossessions": {
+        "value": "",
+        "visible": false
+      },
+      "Traits": {
+        "value": "梦想家。(例如，惯常异想天开，预言家，创造者)",
+        "visible": false
+      },
+      "InjuriesAndScars": {
+        "value": "",
+        "visible": false
+      },
+      "PhobiasAndManias": {
+        "value": "",
+        "visible": false
+      },
+      "ArcaneTomesAndSpells": {
+        "value": "",
+        "visible": false
+      },
+      "EncountersWithStrangeEntities": {
+        "value": "",
+        "visible": false
+      }
+    },
+    "weapons": {
+      "Fighting_Brawl": {
+        "weaponName": "徒手格斗",
+        "damage": "1D3+DB",
+        "type": "格斗:斗殴",
+        "attacks": "1",
+        "range": "-",
+        "ammo": "-",
+        "malfunction": "95"
+      }
+    },
+    "items": {
+      "item_1": {
+        "name": "装饰皮带",
+        "storageLocation": "皮带",
+        "description":"可以悬挂多种物品"
+      },
+      "item_2": {
+        "name": "古老硬币",
+        "storageLocation": "口袋",
+         "description":"长相奇特且发着诡异的光"
+      }
+    },
+    "notifications": {
+      "notification_1": {
+        "senderName": "Game Master",
+        "unixtimestamp": "1710453600",
+        "message": "Your research has uncovered a mysterious artifact in the archives."
+      },
+      "notification_2": {
+        "senderName": "System",
+        "unixtimestamp": "1710367200",
+        "message": "Daily login reward received: 5 skill points added to Library Use."
+      },
+      "notification_3": {
+        "senderName": "Alfred",
+        "unixtimestamp": "1710280800",
+        "message": "Professor, I have urgent news regarding our latest expedition!"
+      }
+    }
+  }
+]

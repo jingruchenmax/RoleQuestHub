@@ -1,0 +1,31 @@
+{
+    "name": "John Doe",
+    "birthplace": "London",
+    "gender": "Male",
+    "occupation": "Detective",
+    "residence": "New York",
+    "age": 36,
+    "characteristics": {
+      "STR": 50,
+      "SIZ": 60,
+      "CON": 55,
+      "POW": 70,
+      "DEX": 65,
+      "APP": 40,
+      "INT": 80,
+      "EDU": 75,
+      "hitPoints": 12,
+      "magicPoints": 8,
+      "luck": 50,
+      "sanity": 70
+    },
+    "skills": {
+      "Accounting": { "value": 5, "visible": false },
+      "Anthropology": { "value": 1, "visible": true },
+      "Archaeology": { "value": 1, "visible": false },
+      "Firearms_Handgun": { "value": 20, "visible": true },
+      "CthulhuMythos": { "value": 0, "visible": false },
+      "Persuade": { "value": 10, "visible": true }
+    }
+  }
+  

@@ -1,0 +1,540 @@
+/* Root styles for light and dark mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --text-hover-color:#d9d9d9;
+    --input-bg: #f0f0f0;
+    --input-border: #ccc;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --button-text: #ffffff;
+    --button-title-bg: #f0f0f0;
+    --button-title-hover: #d9d9d9;
+    --button-title-text: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --text-hover-color:#424242;
+        --input-bg: #1e1e1e;
+        --input-border: #444;
+        --button-bg: #1a73e8;
+        --button-hover: #0c47a1;
+        --button-text: #ffffff;
+        --button-title-bg: #1e1e1e;
+        --button-title-hover: #424242;
+        --button-title-text: #e0e0e0;
+    }
+}
+
+/* Full-screen setup */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents unwanted scrolling */
+    max-width: 100vw; 
+    overflow-x: hidden;
+}
+
+/* App container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sticky Language Selector at the Top */
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.language-selector label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.language-dropdown {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    width: 150px;
+    text-align: center;
+}
+
+/* Login container */
+.login-container {
+    margin:5%;
+    padding: 2rem;
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+}
+
+/* Input fields */
+.login-input {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Button */
+.login-button {
+    width: 60%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Scrollable Dashboard Wrapper */
+.dashboard-wrapper {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjusted for header and footer */
+    padding-bottom: 60px; /* Space for bottom navigation */
+    scrollbar-width: none;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 900px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Cards for Dashboard */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    text-align: left;
+}
+
+
+.card-content {
+    padding-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Card title styled as a button */
+.clickable-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--button-title-bg); /* Uses button color */
+    color: var(--button-title-text);
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    user-select: none; /* Prevents text selection */
+}
+
+/* Hover effect */
+.clickable-title:hover {
+    background: var(--button-title-hover);
+}
+
+/* Active (click feedback) effect */
+.clickable-title:active {
+    transform: scale(0.98);
+}
+
+/* Adjust collapsed title */
+.collapsed-title {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Collapse icon */
+.collapse-icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Notifications List */
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Notification Item */
+.notification-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-item strong {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Timestamp Style */
+.notification-date {
+    display: block;
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 5px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spaces them out */
+    width: 90%; /* Ensures it takes full width */
+    margin:10px;
+    padding: 10px;
+  }
+
+/* Logout Button */
+.logout-button {
+    margin:10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .app-container {
+        width: 100%;
+    }
+
+    .dashboard-content {
+        max-width: 95%;
+    }
+
+    .card,
+    .notifications-card {
+        max-width: 95%;
+    }
+
+      
+      .info-grid {
+        grid-template-columns: 1fr; /* Stack fields on smaller screens */
+        text-align: left;
+      }
+    
+      .info-field {
+        text-align: left;
+        padding: 0;
+      }
+}
+  
+  .info-title {
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Adjusted ratio for better balance */
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .dynamic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .dynamic-grid {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dynamic-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .dynamic-grid {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }}
+
+.info-field {
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: right;
+    min-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2px;
+    flex-shrink: 0; /* Prevents shrinking when the grid collapses */
+}
+
+  
+  .info-value {
+    color: var(--text-color);
+    text-align: left;
+    background: var(--background-color);
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .info-value:hover {
+    background: var(--text-hover-color);
+    transition: background 0.3s ease-in-out;
+  }
+  
+/* Grid layout with different column proportions */
+.descriptions-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr; 
+    gap: 12px;
+    align-items: center;
+}
+
+/* Grid row with adjusted field-value ratio */
+.descriptions-row {
+    display: contents; /* Allows each row to adapt properly in the grid */
+}
+
+/* Left column (title) */
+.descriptions-field {
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: right;
+    padding-right: 2px;
+}
+
+/* Right column (value) */
+.descriptions-value {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .descriptions-grid {
+        grid-template-columns: 1fr 4fr; /* Adjust to 40%-60% on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .descriptions-grid {
+        grid-template-columns: 1fr; /* Stack into a single column for mobile */
+    }
+
+    .descriptions-field {
+        text-align: left;
+        padding-right: 0;
+        font-weight: bold;
+    }
+}
+
+/* Weapons Container */
+.weapons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+/* Individual Weapon Card */
+.weapon-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Weapon Name */
+.weapon-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+/* Weapon Details (fields and values) */
+.weapon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Field Name (Label) */
+.weapon-label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Field Value */
+.weapon-value {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+    .weapons-container {
+        flex-direction: row;
+    }
+    
+    .weapon-card {
+        width: calc(50% - 16px);
+    }
+}
+
+@media (min-width: 900px) {
+    .weapon-card {
+        width: calc(33% - 16px);
+    }
+}
+
+
+/* Items Container */
+.items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Each Storage Location Section */
+.items-section {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Location Header */
+.items-location {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Items Grid */
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* First column for name, second for description */
+    gap: 8px;
+    align-items: center;
+    text-align: left;
+}
+
+/* Individual Item */
+.item-entry {
+    display: contents;
+}
+
+/* Item Name */
+.item-name {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Item Description */
+.item-description {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .items-grid {
+        grid-template-columns: 1fr; /* Stack items in 1 column for mobile */
+    }
+}
